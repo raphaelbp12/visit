@@ -1,0 +1,72 @@
+<ion-view>
+  <ion-nav-bar class="bar-dark" align-title="center">
+      <ion-nav-back-button>
+        <i class="ion-arrow-left-c"></i> Back
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-arrow-back" ng-click="$ionicGoBack()">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-title>
+        {{title}}
+      </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content style="padding-top: 40px">
+    <ion-refresher
+      pulling-text="Puxe para recarregar..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="post"  ng-repeat='item in posts'>
+      <div class="header" style="background-image: url({{item['banner']}});">
+        <div class="info" ng-if="hasdate">
+          <div class="wraper">
+            <div class="time">
+              <h4>
+                {{item.postmetas.data_inicio | date: "dd"}}
+                <span class="month">{{item.postmetas.data_inicio | date: "MMM"}}</span>
+              </h4>
+              <span class="spacer">-</span>
+              <h4>
+                {{item.postmetas.data_final | date: "dd"}}
+                <span class="month">{{item.postmetas.data_final | date: "MMM"}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-content" ng-bind-html="item.content"></div>
+      <div class="post-content-expand" ng-if="item.content" ng-click="expandPostContent()">Ver mais <i style="margin-left: 6px" class="ion-chevron-down"></i></div>
+
+      <div class="posts-editorial">
+        <a class="postlink" href="#/post/{{editorial.id}}"  ng-repeat='editorial in item.posts_editorial'>
+          <div class="atracao" style="background-image: url({{editorial['postmetas']['_thumbnail_id']}});">
+            <div class="text"><h1>{{editorial.title}}</h1></div>
+          </div>
+        </a>
+      </div>
+
+      <div id="map" data-tap-disabled="true" ng-if="item.address"></div>
+      <div ng-init="loadmap()" ng-if="item.address"></div>
+      <div class="deeplinks" ng-if="item.address">
+        <div class="item" ng-click="openMoovit()"><img class="icon-img deeplink-icon" src="img/Icones/Local/rio_app_moovit.svg"/> <span>Chegue lá com Moovit</span></div>
+      </div>
+      <div class="tableinfo" ng-if="item.address">
+        <div class="info"><div class="wraper"><img class="icon-img deeplink-icon" src="img/Icones/Local/rio_local.svg"/> <p>{{item.address}}</p></div></div>
+        <div class="info"><div class="wraper"><img class="icon-img deeplink-icon" src="img/Icones/Local/rio_horario.svg"/> <p>{{item.time}}</p></div></div>
+        <div class="info" style="border-right: 0px;"><a href="tel:{{item.telephone}}"><div class="wraper"><img class="icon-img deeplink-icon" src="img/Icones/Local/rio_atendimento.svg"/> <p>{{item.telephone}}</p></div></a></div>
+        <div class="info"><div class="wraper"><img class="icon-img deeplink-icon" src="img/Icones/Local/rio_custo.svg"/> <p>{{item.price}}</p></div></div>
+        <div class="info"><div class="wraper"><img class="icon-img deeplink-icon" src="img/Icones/Local/rio_email.svg"/> <p>{{item.email}}</p></div></div>
+        <div class="info" style="border-right: 0px;"><div class="wraper"><img class="icon-img deeplink-icon" src="img/Icones/Local/rio_website.svg"/> <p>{{item.website}}</p></div></div>
+      </div>
+    </div>
+    <ion-infinite-scroll  distance="10%" ng-if="!finished" on-infinite="nextPage()">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
+
+<style>
+  .scroll {
+    margin-top: 5px;
+    padding: 0px;
+    text-align: center;
+  }
+</style>

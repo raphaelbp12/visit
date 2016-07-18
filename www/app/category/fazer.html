@@ -1,0 +1,42 @@
+
+<ion-view>
+
+  <ion-nav-bar class="bar-dark" align-title="center">
+      <ion-nav-back-button>
+        <i class="ion-arrow-left-c"></i> Back
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-arrow-back" ng-click="go('home');">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-title>
+        O QUE FAZER
+      </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content scroll="false">
+        <div class="arrow arrow-right" ng-click="onArrowPress('right');"><i class="ion-chevron-right"></i></div>
+        <div class="arrow arrow-left" ng-click="onArrowPress('left');"><i class="ion-chevron-left"></i></div>
+        <ion-tabs class="tabs-striped tabs-color-fazer">
+          <ion-tab on-select="onTabSelect(1)" title="ao ar livre" href="#/fazer/ao-ar-livre">
+            <ion-nav-view name="fazer-ao-ar-livre"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(2)" title="bem estar" href="#/fazer/bem-estar">
+            <ion-nav-view name="fazer-bem-estar"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(3)" title="compras" href="#/fazer/compras">
+            <ion-nav-view name="fazer-compras"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(4)" title="cultura e arte" href="#/fazer/cultura-arte">
+            <ion-nav-view name="fazer-cultura-arte"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(5)" title="esportes" href="#/fazer/esportes">
+            <ion-nav-view name="fazer-esportes"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(6)" title="para dançar" href="#/fazer/vida-noturna">
+            <ion-nav-view name="fazer-vida-noturna"></ion-nav-view>
+          </ion-tab>
+
+        </ion-tabs>
+  </ion-content>
+
+</ion-view>

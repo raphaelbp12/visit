@@ -1,0 +1,41 @@
+.list-content {
+  padding: 10px 5px 0px 5px;
+}
+
+a.postlink {
+  display: inline-block;
+}
+
+.atracao {
+  margin: 0px 2px;
+  max-width: 200px;
+  max-height: 200px;
+  width: calc(50vw - 12px);
+  height: calc(50vw - 12px);
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: inline-block;
+  display: -webkit-inline-box;
+}
+
+.atracao .text {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  display: table;
+}
+
+.atracao .text h1 {
+  font-size: 18px;
+  vertical-align: middle;
+  display: table-cell;
+  font-family: brandonbld;
+  text-transform: uppercase;
+}

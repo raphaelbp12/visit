@@ -1,0 +1,68 @@
+
+.mycovernavbar{
+  height: 145px !important;
+  padding: 0px !important;
+}
+
+.myCustomCoverBar {
+  width: 100%;
+  height: 100%;
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.myCustomCoverBar .button {
+  color: #fb1919;
+}
+
+.myCustomCoverBar .button:hover {
+  color: #fb493c;
+}
+
+.header-mask {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+.hascoverbar-and-tabs{
+  top: 195px !important;
+  bottom: 0px !important;
+}
+
+.header-content {
+  bottom: 15px;
+  position: absolute;
+  width: 100%;
+}
+
+.header-content .rest-list-info {
+  position: relative;
+  top: 10px;
+}
+
+.header-content .rest-list-avatar img {
+  max-width: 50px !important;
+  max-height: 50px !important;
+  float: right;
+  margin-top: 10px;
+}
+
+.header-content .rest-list-avatar {
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+
+.header-content .rest-list-info p{
+  margin: 0 0 0;
+}
+
+.header-content .rest-list-info .rest-name{
+  margin-top: 5px;
+  font-size: 17px;
+}

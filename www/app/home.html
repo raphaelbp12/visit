@@ -1,0 +1,87 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark" align-title="center">
+      <ion-nav-title>
+        <img style="height: 35px; position: relative; top: -3px;" src="img/white-logo-44px.png">
+      </ion-nav-title>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content  scroll="false">
+      <div style="width: 100%; height: calc(100% - 250px); background-color: #000; display: block;">
+        <ion-slide-box>
+          <ion-slide ng-repeat="post in posts">
+            <div class="slide-image" style="background-image: url('{{post.postmetas._thumbnail_id}}');">
+              <a class="text" ui-sref="slider">
+                {{post.title}}
+              </a>
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+
+    	<div class="home-menu-row">
+    		<div class="home-button">
+          <a ui-sref="fazer.ao-ar-livre">
+            <div class="home-icon"><img class="icon-img visit-home-icon" src="img/Icones/Menu/rio_fazer.svg"/></div>
+            <div class="home-icon-text">O QUE FAZER</div>
+          </a>
+        </div>
+
+    		<div class="home-button">
+          <a ui-sref="comer.bares">
+            <div class="home-icon"><img class="icon-img visit-home-icon" src="img/Icones/Menu/rio_comer.svg"/></div>
+            <div class="home-icon-text">ONDE COMER</div>
+          </a>
+        </div>
+
+    		<div class="home-button">
+          <a ui-sref="ficar.albergues">
+            <div class="home-icon"><img class="icon-img visit-home-icon" src="img/Icones/Menu/rio_estar.svg"/></div>
+            <div class="home-icon-text">ONDE FICAR</div>
+          </a>
+        </div>
+    	</div>
+    	<div class="home-menu-row">
+    		<div class="home-button">
+          <a ui-sref="sobre">
+            <div class="home-icon"><img class="icon-img visit-home-icon" src="img/Icones/Menu/rio_sobre.svg"/></div>
+            <div class="home-icon-text">SOBRE O RIO</div>
+          </a>
+        </div>
+
+    		<div class="home-button">
+          <a ui-sref="events">
+            <div class="home-icon"><img class="icon-img visit-home-icon" src="img/Icones/Menu/rio_agenda.svg"/></div>
+            <div class="home-icon-text">AGENDA</div>
+          </a>
+        </div>
+
+    		<div class="home-button" ng-click="openMoovit()">
+          <div class="home-icon"><img class="icon-img visit-home-icon" src="img/Icones/Menu/rio_mobilidade.svg"/></div>
+          <div class="home-icon-text">MOBILIDADE</div>
+        </div>
+    	</div>
+
+    </ion-content>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content  scroll="false">
+      <div class="left-content">
+        <div class="visit-header">
+          <img src="img/logo_rodape.gif"/>
+        </div>
+        <div class="visit-content">
+          <ul class="menu-list">
+            <li class="menu-item" ui-sref="sobre">Sobre</li>
+            <li class="menu-item" ui-sref="events">Agenda</li>
+            <li class="menu-item" ng-click="openMoovit()">Mobilidade</li>
+          </ul>
+        </div>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,40 @@
+
+<ion-view>
+
+  <ion-nav-bar class="bar-dark" align-title="center">
+      <ion-nav-back-button>
+        <i class="ion-arrow-left-c"></i> Back
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-arrow-back" ng-click="go('home');">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-title>
+        ONDE FICAR
+      </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content scroll="false">
+        <div class="arrow arrow-right" ng-click="onArrowPress('right');"><i class="ion-chevron-right"></i></div>
+        <div class="arrow arrow-left" ng-click="onArrowPress('left');"><i class="ion-chevron-left"></i></div>
+        <ion-tabs class="tabs-striped tabs-color-ficar">
+
+          <ion-tab on-select="onTabSelect(1)" title="albergues" href="#/ficar/albergues">
+            <ion-nav-view name="ficar-albergues"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(2)" title="apart hotéis" href="#/ficar/apart-hoteis">
+            <ion-nav-view name="ficar-apart-hoteis"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(3)" title="cama e café" href="#/ficar/cama-e-cafe">
+            <ion-nav-view name="ficar-cama-e-cafe"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(4)" title="hotéis" href="#/ficar/hoteis">
+            <ion-nav-view name="ficar-hoteis"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(5)" title="pousadas" href="#/ficar/pousada">
+            <ion-nav-view name="ficar-pousada"></ion-nav-view>
+          </ion-tab>
+
+        </ion-tabs>
+  </ion-content>
+
+</ion-view>

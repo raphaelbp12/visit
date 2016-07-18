@@ -1,0 +1,144 @@
+/* Empty. Add your own CSS if you like */
+
+@font-face {
+    font-family: brandonbld;
+    src: url(../font/brandonbld.woff);
+}
+
+@font-face {
+    font-family: brandonblk;
+    src: url(../font/brandonblk.woff);
+}
+
+@font-face {
+    font-family: kievitslabregular;
+    src: url(../font/kievitslabregular.woff);
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+.tab-item span.tab-title {
+    font-family: brandonbld;
+    text-transform: uppercase;
+}
+
+.title span.nav-bar-title {
+  text-transform: uppercase;
+  font-family: brandonblk !important;
+}
+
+body {
+  font-family: kkievitslabregular !important;
+}
+
+.md-scroll-mask { position: initial;}
+
+.bar.bar-dark {
+  background-color: #000 !important;
+}
+
+.button-login {
+  border-radius: 90px;
+  color: white;
+}
+
+.button-login:hover {
+  color: #eee;
+}
+
+ion-content {
+  background-color: #fff;
+  font-family: kkievitslabregular !important;
+}
+
+.facebook-blue {
+  background-color: #414598;
+}
+
+.googleplus-red {
+  background-color: #D85145;
+}
+
+.email-gray {
+  background-color: #979797;
+}
+
+input.input-login {
+  color: #000;
+  background-color: #e6e6e6;
+  border: none;
+  border-bottom: solid 1px #000;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-size: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000;
+}
+
+.rest-list-avatar {
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+
+.rest-list-info {
+  width: calc(100% - 81px);
+  float: left;
+  margin-left: 16px;
+}
+
+.rest-list-info .rest-name{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.rest-list-info .rest-charac span{
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.rest-list-info .rest-loc{
+  text-transform: capitalize;;
+  font-size: 11px;
+  color: #989b9d;
+}
+
+.rest-list-avatar img{
+  max-width: 65px !important;
+  max-height: 65px !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}

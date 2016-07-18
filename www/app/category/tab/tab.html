@@ -1,0 +1,23 @@
+<ion-view>
+  <ion-content>
+    <ion-refresher
+      pulling-text="Puxe para recarregar..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <a class="postlink" href="#/post/{{item.id}}"  ng-repeat='item in posts'>
+      <div class="atracao" style="background-image: url({{item['postmetas']['_thumbnail_id']}});">
+        <div class="text"><h1>{{item.title}}</h1></div>
+      </div>
+    </a>
+    <ion-infinite-scroll  distance="10%" ng-if="!finished" on-infinite="nextPage()">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
+
+<style>
+  .scroll {
+    margin-top: 5px;
+    padding: 6px;
+    text-align: center;
+  }
+</style>

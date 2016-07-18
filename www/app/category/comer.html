@@ -1,0 +1,43 @@
+
+<ion-view>
+
+  <ion-nav-bar class="bar-dark" align-title="center">
+      <ion-nav-back-button>
+        <i class="ion-arrow-left-c"></i> Back
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-arrow-back" ng-click="go('home');">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-title>
+        ONDE COMER
+      </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content scroll="false">
+        <div class="arrow arrow-right" ng-click="onArrowPress('right');"><i class="ion-chevron-right"></i></div>
+        <div class="arrow arrow-left" ng-click="onArrowPress('left');"><i class="ion-chevron-left"></i></div>
+        <ion-tabs class="tabs-striped tabs-color-comer">
+
+          <ion-tab on-select="onTabSelect(1)" title="bares" href="#/comer/bares">
+            <ion-nav-view name="comer-bares"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(2)" title="cafés" href="#/comer/cafes">
+            <ion-nav-view name="comer-cafes"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(3)" title="fastfood" href="#/comer/fastfood">
+            <ion-nav-view name="comer-fastfood"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(4)" title="quiosques" href="#/comer/quiosques">
+            <ion-nav-view name="comer-quiosques"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(5)" title="restaurantes" href="#/comer/restaurantes">
+            <ion-nav-view name="comer-restaurantes"></ion-nav-view>
+          </ion-tab>
+          <ion-tab on-select="onTabSelect(6)" title="sorveterias" href="#/comer/sorveterias">
+            <ion-nav-view name="comer-sorveterias"></ion-nav-view>
+          </ion-tab>
+
+        </ion-tabs>
+  </ion-content>
+
+</ion-view>
